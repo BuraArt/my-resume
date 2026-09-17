@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --brand: #007a6d;
+    --brand-dark: #005b52;
+    --surface: #ffffff;
+    --background: #f5f7f7;
+    --text: #1e293b;
+    --border: #e2e8e6;
+    --radius: 12px;
+    --gap: 24px;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+header {
+    background-color: var(--brand-dark);
+    color: white;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: white;
+    color: var(--brand);
+}
+
+main {
+    max-width: 1000px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: var(--surface);
+    padding: var(--gap);
+    margin-bottom: var(--gap);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+section:hover {
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+h2 {
+    margin-top: 0;
+    color: var(--brand-dark);
+}
+
+h3 {
+    color: var(--brand);
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    padding: 20px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+img {
+    max-width: 100%;
+    border-radius: var(--radius);
+}
+
+button,
+.btn {
+    background-color: var(--brand);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button:hover,
+.btn:hover {
+    background-color: var(--brand-dark);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #334155;
+    color: white;
+}
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+}
